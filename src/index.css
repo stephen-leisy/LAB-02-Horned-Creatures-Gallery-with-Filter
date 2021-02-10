@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: antiquewhite;
 }
 
 code {
@@ -34,4 +35,18 @@ code {
   
 
   
+}
+.main-header {
+  background-color:coral;
+  color: antiquewhite;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
 }
