@@ -31,6 +31,7 @@ export default class App extends React.Component {
   render() {
 
     const uniqueAnimalItems = [...new Set(images.map(image => image.keyword))];
+    const uniqueHornCount = [...new Set(images.map(image => image.horns))];
 
     console.log(uniqueAnimalItems)
     const filteredImages = images.filter((image) => {
@@ -62,7 +63,7 @@ export default class App extends React.Component {
 
           Number of horns
           <Dropdown currentValue={this.state.horns} handleChanges={this.handlerHorns}
-            options={[1, 2, 3, 100]} />
+            options={uniqueHornCount} />
 
         </form>
         <div className="form-data">
