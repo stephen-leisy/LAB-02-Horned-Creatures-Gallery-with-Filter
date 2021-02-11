@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-
+import ImageItem from './ImageItem.js'
 
 export default class ImageList extends Component {
     render() {
-        return (
-            <li
-                className="individual-image">
-                <p>{this.props.image.keyword}</p>
-                <p>{this.props.image.horns}</p>
-                <img alt={this.props.image.title} src={this.props.image.url} className="animal-image" />
-            </li>
-        )
 
+        return (
+            <ul className="Image-list-styling">
+                { this.props.filteredImages.map(image =>
+                    <ImageItem
+                        key={image.name}
+                        imageProp={image} />)}
+            </ul>
+        )
     }
 }
